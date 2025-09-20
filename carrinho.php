@@ -4,12 +4,14 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carrinho de Compras | Pizzaria Primicia</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header id="header">
     <nav>
@@ -27,7 +29,7 @@ session_start();
         <span></span>
         <span></span>
       </div>
-      
+
       <!-- Carrinho -->
       <div class="cart-badge" onclick="window.location.href='carrinho.php'">
         🛒
@@ -41,13 +43,14 @@ session_start();
       <div class="section-subtitle">Seu Pedido</div>
       <h2 class="section-title serif"><i class="fa-solid fa-shopping-cart"></i> Carrinho de Compras</h2>
     </div>
-    
+
     <div id="cart-items" class="fade-in"></div>
-    
+
     <div id="cart-total" class="serif fade-in"></div>
-    
+
     <div class="cart-actions fade-in" style="margin: 40px 0 60px; display: flex; gap: 15px; flex-wrap: wrap;">
-      <button onclick="clearCart()" class="form-button" style="background: var(--dark-gray); flex: 1; min-width: 200px;">
+      <button onclick="clearCart()" class="form-button"
+        style="background: var(--dark-gray); flex: 1; min-width: 200px;">
         <i class="fa-solid fa-trash"></i> Limpar Carrinho
       </button>
       <button onclick="finalizarPedido()" class="form-button" style="flex: 2; min-width: 200px;">
@@ -66,59 +69,60 @@ session_start();
   </main>
 
   <footer>
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3 class="serif"><i class="fa-solid fa-pizza-slice"></i> Pizzaria Primicia</h3>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="serif"><i class="fa-solid fa-pizza-slice"></i> Pizzaria Primicia</h3>
+          <p>
+            Tradição italiana desde 2008. Especializada em pizzas artesanais
+            com ingredientes premium e receitas autênticas transmitidas
+            através de gerações.
+          </p>
+          <br />
+          <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="serif"><i class="fa-solid fa-bars"></i> Navegação</h3>
+          <a href="#home">Início</a><br />
+          <a href="#menu">Cardápio Completo</a><br />
+          <a href="#about">Nossa História</a><br />
+          <a href="#contact">Contato & Pedidos</a><br />
+          <a href="#">Política de Privacidade</a><br />
+          <a href="#">Termos de Uso</a>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="serif"><i class="fa-solid fa-headset"></i> Atendimento</h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Avenida Presidente Tancredo Neves, 3105 - Jardim Alice<br />
+            <i class="fa-solid fa-phone"></i> (11) 3256-8900 | <i class="fa-solid fa-mobile-screen-button"></i> (11)
+            99845-7623<br />
+            <i class="fa-solid fa-envelope"></i> contato@pizzariaprimicia.com.br<br />
+            <i class="fa-regular fa-clock"></i> Ter-Dom: 18h às 23h45<br />
+            <i class="fa-solid fa-truck"></i> Delivery em toda São Paulo
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="serif"><i class="fa-solid fa-share-alt"></i> Conecte-se</h3>
+          <a href="#"><i class="fa-brands fa-instagram"></i> Instagram @pizzariaprimicia</a><br />
+          <a href="#"><i class="fa-brands fa-facebook"></i> Facebook /pizzariaprimicia</a><br />
+          <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp Business</a><br />
+          <a href="#"><i class="fa-solid fa-utensils"></i> iFood & Uber Eats</a><br />
+          <a href="#"><i class="fa-regular fa-newspaper"></i> Newsletter Exclusiva</a><br />
+          <a href="#"><i class="fa-solid fa-gift"></i> Programa Fidelidade</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
         <p>
-          Tradição italiana desde 2008. Especializada em pizzas artesanais
-          com ingredientes premium e receitas autênticas transmitidas
-          através de gerações.
+          &copy; 2024 Pizzaria Primicia Delivery. Todos os direitos
+          reservados. | Desenvolvido com paixão pela gastronomia italiana.
         </p>
-        <br />
-        <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
-      </div>
-
-      <div class="footer-section">
-        <h3 class="serif"><i class="fa-solid fa-bars"></i> Navegação</h3>
-        <a href="#home">Início</a><br />
-        <a href="#menu">Cardápio Completo</a><br />
-        <a href="#about">Nossa História</a><br />
-        <a href="#contact">Contato & Pedidos</a><br />
-        <a href="#">Política de Privacidade</a><br />
-        <a href="#">Termos de Uso</a>
-      </div>
-
-      <div class="footer-section">
-        <h3 class="serif"><i class="fa-solid fa-headset"></i> Atendimento</h3>
-        <p>
-          <i class="fa-solid fa-location-dot"></i> Avenida Presidente Tancredo Neves, 3105 - Jardim Alice<br />
-          <i class="fa-solid fa-phone"></i> (11) 3256-8900 | <i class="fa-solid fa-mobile-screen-button"></i> (11) 99845-7623<br />
-          <i class="fa-solid fa-envelope"></i> contato@pizzariaprimicia.com.br<br />
-          <i class="fa-regular fa-clock"></i> Ter-Dom: 18h às 23h45<br />
-          <i class="fa-solid fa-truck"></i> Delivery em toda São Paulo
-        </p>
-      </div>
-
-      <div class="footer-section">
-        <h3 class="serif"><i class="fa-solid fa-share-alt"></i> Conecte-se</h3>
-        <a href="#"><i class="fa-brands fa-instagram"></i> Instagram @pizzariaprimicia</a><br />
-        <a href="#"><i class="fa-brands fa-facebook"></i> Facebook /pizzariaprimicia</a><br />
-        <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp Business</a><br />
-        <a href="#"><i class="fa-solid fa-utensils"></i> iFood & Uber Eats</a><br />
-        <a href="#"><i class="fa-regular fa-newspaper"></i> Newsletter Exclusiva</a><br />
-        <a href="#"><i class="fa-solid fa-gift"></i> Programa Fidelidade</a>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <p>
-        &copy; 2024 Pizzaria Primicia Delivery. Todos os direitos
-        reservados. | Desenvolvido com paixão pela gastronomia italiana.
-      </p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <script>
     // Recupera carrinho do localStorage
@@ -149,10 +153,10 @@ session_start();
       const totalDiv = document.getElementById('cart-total');
       const emptyDiv = document.getElementById('cart-empty');
       const cartActions = document.querySelector('.cart-actions');
-      
+
       container.innerHTML = "";
 
-      if(cart.length === 0){
+      if (cart.length === 0) {
         container.style.display = 'none';
         totalDiv.style.display = 'none';
         cartActions.style.display = 'none';
@@ -224,13 +228,13 @@ session_start();
         removeItem(index);
         return;
       }
-      
+
       cart[index].quantity = newQuantity;
       localStorage.setItem('cart', JSON.stringify(cart));
       renderCart();
     }
 
-    function removeItem(index){
+    function removeItem(index) {
       cart.splice(index, 1);
       localStorage.setItem('cart', JSON.stringify(cart));
       renderCart();
@@ -238,7 +242,7 @@ session_start();
 
     function clearCart() {
       if (cart.length === 0) return;
-      
+
       if (confirm('Tem certeza que deseja limpar todo o carrinho?')) {
         cart = [];
         localStorage.removeItem('cart');
@@ -246,16 +250,16 @@ session_start();
       }
     }
 
-   function finalizarPedido(){
-  if(cart.length === 0) {
-    alert("Seu carrinho está vazio!");
-    return;
-  }
-  // leva ao formulário e foca o campo nome
-  window.location.href = 'index.php#contact';
-  // após redirecionar, é difícil garantir foco via JS se a página recarregar.
-  // então, no index.php, se quiser, podemos adicionar lógica para checar location.hash e focar o campo.
-}
+    function finalizarPedido() {
+      if (cart.length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
+      }
+      // leva ao formulário e foca o campo nome
+      window.location.href = 'index.php#contact';
+      // após redirecionar, é difícil garantir foco via JS se a página recarregar.
+      // então, no index.php, se quiser, podemos adicionar lógica para checar location.hash e focar o campo.
+    }
 
     // Atualiza badge do carrinho
     function updateCartCount() {
@@ -300,4 +304,5 @@ session_start();
     renderCart();
   </script>
 </body>
+
 </html>
